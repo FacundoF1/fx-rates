@@ -1,0 +1,18 @@
+POST http://localhost:3000/v1/currency/EURBRL
+Content-Type: application/json
+{
+    "amount": 25
+}
+###
+
+GET http://localhost:3000/v1/systemInfo
+###
+
+POST http://localhost:3000/v1/currency/
+Content-Type: application/json
+
+{
+    "pair": "EURBRL",
+    "porcent_fee": "3",
+}
+###

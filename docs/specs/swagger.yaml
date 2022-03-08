@@ -1,0 +1,87 @@
+---
+openapi: 3.0.2
+info:
+  title: 'Swagger - FX Rates'
+  description: Generated with documentation dinamyc created by Facundo Ferrari.
+  version: 1.0.0
+servers:
+- url: http://localhost:8080
+tags:
+- name: v1
+paths:
+  "/v1/rates/fee":
+      post:
+        tags:
+        - v1
+        description: "Endpoint to add a mark-up fee over the obtained FX rate"
+        parameters: []
+        responses:
+          '200':
+            description: OK
+        requestBody:
+          description: ''
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/v1-rates-fee"
+          required: true
+  "/v1/rates/{pair}":
+    post:
+      tags:
+      - v1
+      description: "Endpoint To create rates by obtaining FX rates from a given provider. Look amount with added rates fee"
+      parameters:
+        - name: "pair"
+          in: "path"
+          description: "Pair to return"
+          required: true
+          type: "string"
+          format: "int64"
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/v1-rates-pair"
+        required: true
+  "/v1/systemInfo":
+      post:
+        tags:
+        - v1
+        description: "Return information about count intances the classes looked"
+        parameters: []
+        responses:
+          '200':
+            description: OK
+components:
+  schemas:
+    v1-rates-pair:
+      type: object
+      properties:
+        amount:
+          type: number
+    v1-rates-fee:
+      type: object
+      properties:
+        pair:
+          type: string
+        porcent_fee:
+          type: string
+  requestBodies:
+    v1-rates-pair:
+      description: ''
+      content:
+        application/json:
+          schema:
+            "$ref": "#/components/schemas/v1-rates-pair"
+      required: true
+    v1-rates-fee:
+      description: ''
+      content:
+        application/json:
+          schema:
+            "$ref": "#/components/schemas/v1-rates-fee"
+      required: true

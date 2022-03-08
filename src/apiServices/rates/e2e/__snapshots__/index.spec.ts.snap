@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rates currency fee amount Create rate fee 1`] = `
+Object {
+  "_id": "kn3ULBTplUrDp2Og",
+  "fee": 5,
+  "pair": "EURBRL",
+}
+`;
+
+exports[`Rates currency fee amount Should response amount more rates with fee 1`] = `
+Object {
+  "fee": "5 %",
+  "fee_amount": 145.77633,
+  "original_rate": 5.553384,
+  "pair": "EURBRL",
+  "rate": 5.8310532,
+}
+`;
