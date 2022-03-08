@@ -7,7 +7,7 @@
   "main": "./dist/**/*.js.map",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "start": "nodemon ./bin/www",
+    "start": "npm run build && nodemon ./bin/www",
     "debug": "nodemon --inspect ./bin/www",
     "docs:prepare": "node scripts/documentation/cli/lib/copy_documentation_in_docs.js",
     "docs": "node scripts/documentation/cli/index.js",

@@ -3,8 +3,8 @@ import axios from 'axios';
 
 export class ConnectionFixer {
 
-    private url: string = '';
-    private API_KEY: string = '';
+    private url: string = 'http://data.fixer.io/api';
+    private API_KEY: string = '824e753b9d8f1bf170e5adf80e7788e9';
 
     constructor() {}
 
