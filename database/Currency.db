@@ -1,0 +1,5 @@
+{"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"3UWj2g1KRhY0n2I0"}
+{"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"Yj4mZF9s6MfsBKYT"}
+{"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":150,"rate":5.8310532,"fee_amount":874.6579800000001,"_id":"uQWwfQsN7QkLi9xR"}
+{"success":true,"timestamp":1646737923,"base":"EUR","date":"2022-03-08","rates":{"USD":1.089515},"fee":15,"pair":"EURUSD","symbols":"USD","amount":100,"rate":1.25294225,"fee_amount":125.294225,"_id":"vL79VnkpM6JsjQ7A"}
+{"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"xnAvzr868lgVIHla"}
