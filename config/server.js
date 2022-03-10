@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const host = "fx-rates.eba-mfxmvgdb.us-east-2.elasticbeanstalk.com";
 const server = Hapi.server({
-    port: 3000,
+    port: 8080,
     host: host,
     routes: {
         cors: {
