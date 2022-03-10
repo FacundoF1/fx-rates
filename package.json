@@ -7,9 +7,7 @@
   "scripts": {
     "start": "nodemon ./src/app",
     "debug": "nodemon --inspect ./src/app",
-    "swagger": "node ./swagger.js",
-    "test": "jest",
-    "lint": "eslint '*/**/*.{js,ts}'"
+    "test": "jest"
   },
   "dependencies": {
     "@hapi/hapi": "^20.2.1",

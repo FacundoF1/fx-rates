@@ -1,5 +1,5 @@
 const Hapi = require('@hapi/hapi');
-const host = "localhost";
+const host = "fx-rates.eba-mfxmvgdb.us-east-2.elasticbeanstalk.com";
 const server = Hapi.server({
     port: 3000,
     host: host,
