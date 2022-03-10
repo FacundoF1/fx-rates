@@ -3,8 +3,8 @@ const axios = require('axios');
 class ConnectionFixer {
 
     constructor(){
-        this.url = 'http://data.fixer.io/api';
-        this.API_KEY = '824e753b9d8f1bf170e5adf80e7788e9';
+        this.url = '';
+        this.API_KEY = '';
     }
 
     async getFixerLatest(base, symbols) {
