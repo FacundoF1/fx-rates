@@ -1,5 +1,9 @@
 {"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"3UWj2g1KRhY0n2I0"}
 {"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"Yj4mZF9s6MfsBKYT"}
+{"success":true,"timestamp":1646949123,"base":"EUR","date":"2022-03-10","rates":{"BRL":5.506554},"fee":5,"pair":"EURBRL","symbols":"BRL","amount":25,"rate":5.7818817000000005,"fee_amount":144.5470425,"_id":"ZG5QZWiS3PrSc4jk"}
+{"success":true,"timestamp":1646932623,"base":"EUR","date":"2022-03-10","rates":{"BRL":5.550312},"fee":5,"pair":"EURBRL","symbols":"BRL","amount":25,"rate":5.8278276,"fee_amount":145.69569,"_id":"ZVv6wfQ2fwx0PBfb"}
 {"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":150,"rate":5.8310532,"fee_amount":874.6579800000001,"_id":"uQWwfQsN7QkLi9xR"}
+{"success":true,"timestamp":1646939224,"base":"EUR","date":"2022-03-10","rates":{"BRL":5.512244},"fee":5,"pair":"EURBRL","symbols":"BRL","amount":25,"rate":5.7878562,"fee_amount":144.696405,"_id":"v8oiDc8WvvrItb21"}
 {"success":true,"timestamp":1646737923,"base":"EUR","date":"2022-03-08","rates":{"USD":1.089515},"fee":15,"pair":"EURUSD","symbols":"USD","amount":100,"rate":1.25294225,"fee_amount":125.294225,"_id":"vL79VnkpM6JsjQ7A"}
 {"success":true,"timestamp":1646698323,"base":"EUR","date":"2022-03-08","rates":{"BRL":5.553384},"symbols":"BRL","fee":5,"pair":"EURBRL","amount":25,"rate":5.8310532,"fee_amount":145.77633,"_id":"xnAvzr868lgVIHla"}
+{"success":true,"timestamp":1646949123,"base":"EUR","date":"2022-03-10","rates":{"BRL":5.506554},"fee":5,"pair":"EURBRL","symbols":"BRL","amount":25,"rate":5.7818817000000005,"fee_amount":144.5470425,"_id":"sNeOgFqRoSdfL1wW"}
