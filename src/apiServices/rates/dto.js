@@ -18,7 +18,7 @@ const singleCurrencyPair = (resource) => ({
 
 const multiple = (resources) => resources.map((resource) => singleCurrencyPair(resource));
 
-export = {
+module.exports = {
   singleFee,
   multiple,
   singleCurrencyPair,

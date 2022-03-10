@@ -35,8 +35,8 @@ npm run test
 _Herramientas utilizadas en el proyecto_
 
 * [Node](https://nodejs.org/es/) Lenguaje del proyecto.
-* [Express](https://www.npmjs.com/package/express) Framework api rest.
-* [NeDB](https://github.com/louischatriot/nedb) Embedded persistent or in memory database for Node.js, nw.js, Electron and browsers, 100% JavaScript, no binary dependency. API is a subset of MongoDB's and it's plenty fast.
+* [HapiJs](https://www.npmjs.com/package/express) Framework api rest.
+* [NeDB-MongoDB cache](https://github.com/louischatriot/nedb) Embedded persistent or in memory database for Node.js, nw.js, Electron and browsers, 100% JavaScript, no binary dependency. API is a subset of MongoDB's and it's plenty fast.
 
 ## Versionado 📌
 

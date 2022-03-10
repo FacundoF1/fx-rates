@@ -1,4 +1,4 @@
-import cache from 'memory-cache';
+const cache = require('memory-cache');
 
 const memCache = new cache.Cache();
 const expressCacheMiddleware = (req, res, next) => {
@@ -17,4 +17,4 @@ const expressCacheMiddleware = (req, res, next) => {
     }
 };
 
-export { expressCacheMiddleware };
+module.exports = { expressCacheMiddleware };

@@ -1,15 +1,11 @@
-import { ConnectionNeDB } from './index';
-import { DBAccessModel } from './model';
+const { ConnectionNeDB } = require('./index');
+class connectionNeDB {
 
-export class connectionNeDB <T> {
-
-  private collection: ConnectionNeDB | any | T;
-
-  constructor( name: string ){
-    this.collection = new ConnectionNeDB( DBAccessModel[name] ).connectionNeDB()
+  constructor( name ){
+    this.collection = new ConnectionNeDB( name ).connectionNeDB()
   }
 
-  getAlls = async (page, limit) => {
+  async getAlls (page, limit) {
     return new Promise((resolve, reject) => this.collection.find({})
       .skip(page * limit).limit(limit).exec((err, docs) => {
         if (err) return reject(err);
@@ -17,28 +13,28 @@ export class connectionNeDB <T> {
       }));
   };
 
-  getForId = async (id: string): Promise<T> => {
+  async getForId (id) {
     return new Promise((resolve, reject) => this.collection.findOne({ _id: id }, (err, docs) => {
       if (err) return reject(err);
       return resolve(docs);
     }));
   };
 
-  get = async (data): Promise<T[]> => {
+  async get (data) {
     return new Promise((resolve, reject) => this.collection.find(data, (err, docs) => {
       if (err) return reject(err);
       return resolve(docs);
     }));
   };
 
-  create = async (data: T) => {
+  async create (data) {
     return new Promise((resolve, reject) => this.collection.insert(data, (err, docs) => {
       if (err) return reject(err);
       return resolve(docs);
     }));
   };
 
-  update = async (id, data?: T | any): Promise<T> => {
+  async update (id, data = {}) {
     const { email, username } = data;
     const update = { $set: { email, username } };
 
@@ -49,11 +45,15 @@ export class connectionNeDB <T> {
       }));
   };
 
-  delete = async (id) => {
+  async delete (id) {
     return new Promise((resolve, reject) => this.collection
       .remove({ _id: id }, (err, docs) => {
         if (err) return reject(err);
         return resolve(docs);
       }));
   };
+}
+
+module.exports = {
+  connectionNeDB
 }

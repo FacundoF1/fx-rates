@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "bbcc4ed6-7995-4957-b882-af836e9352ef",
+		"name": "FX-Rates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Amount with rates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "amount",
+						"value": "25",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/rates/EURBRL",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"rates",
+						"EURBRL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add rate to pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pair\": \"EURBRL\",\n    \"porcent_fee\": \"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/rates/fee",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"rates",
+						"fee"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "provider_reference",
+			"value": ""
+		},
+		{
+			"key": "identification_type",
+			"value": ""
+		},
+		{
+			"key": "identification_number",
+			"value": ""
+		},
+		{
+			"key": "client",
+			"value": ""
+		},
+		{
+			"key": "kyc_initiative_id",
+			"value": ""
+		}
+	]
+}

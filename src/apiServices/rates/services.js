@@ -1,65 +1,68 @@
-import { connectionNeDB } from '../../services/NeDb/dao';
-import { ConnectionFixer } from '../../services/Fixer';
-import { ResponseCurrencyModel } from '../../services/Fixer/model';
+const { connectionNeDB } = require('../../services/NeDb/dao');
+const { ConnectionFixer } = require('../../services/Fixer');
 
-export class CurrencyDBAccess<T> {
+class CurrencyDBAccess {
 
-    private currencyDao: connectionNeDB<T> = new connectionNeDB<T>('currency');
+    constructor(){
+        this.currencyDao = new connectionNeDB('Currency');
+    }
 
-    public getCurrencys(page, limit) {
+    getCurrencys(page, limit) {
         return this.currencyDao.getAlls(page, limit);
     };
 
-    public getCurrency(data): Promise<T[]> {
+    getCurrency(data) {
         return this.currencyDao.get(data);
     };
 
-    public getCurrencyForId(id): Promise<T> {
+    getCurrencyForId(id) {
         return this.currencyDao.getForId(id);
     };
 
-    public createCurrency(data) {
+    createCurrency(data) {
         return this.currencyDao.create(data);
     };
 
-    public async updateCurrency(user: T | any ): Promise<T> {
+    async updateCurrency(user) {
         try {
             const { id: _id } = user;
             if (!_id) { throw new Error('CurrencyDBAccess: updateCurrency not found'); }
-            const result: T = await this.currencyDao.update(_id, user);
+            const result = await this.currencyDao.update(_id, user);
             return result;
         } catch (error) {
             return error;
         }
     }
 
-    public async deleteCurrency(id) {
+    async deleteCurrency(id) {
         return this.currencyDao.delete(id);
     };
 
 }
 
-export class RateFeeDBAccess<T> {
+class RateFeeDBAccess {
 
-    private rateFeeDao: connectionNeDB<T> = new connectionNeDB<T>('rate_fee');
+    constructor(){
+        this.rateFeeDao = new connectionNeDB('RateFee');
+    }
 
-    public getCurrencys(page, limit) {
+    getCurrencys(page, limit) {
         return this.rateFeeDao.getAlls(page, limit);
     };
 
-    public getCurrency(data): Promise<T[]> {
+    getCurrency(data) {
         return this.rateFeeDao.get(data);
     };
 
-    public createCurrency(data) {
+    createCurrency(data) {
         return this.rateFeeDao.create(data);
     };
 
-    public async updateCurrency(user: T | any): Promise<T> {
+    async updateCurrency(user) {
         try {
             const { id: _id } = user;
             if (!_id) { throw new Error('rateFeeDaoDBAccess: updateCurrency not found'); }
-            const result: T = await this.rateFeeDao.update(_id, user);
+            const result = await this.rateFeeDao.update(_id, user);
             return result;
         } catch (error) {
             return error;
@@ -68,15 +71,17 @@ export class RateFeeDBAccess<T> {
 
 }
 
-export class CurrencyApiRestAccess<T>{
-    private currencyDao: ConnectionFixer = new ConnectionFixer();
+class CurrencyApiRestAccess {
+    constructor(){
+        this.currencyDao = new ConnectionFixer();
+    }
 
-    public getCurrencyFixer( base, symbols ): Promise<T[]> {
+    getCurrencyFixer( base, symbols ) {
         return this.currencyDao.getFixerLatest( base, symbols );
     };
 }
 
-export function getPair( pair: string ): { base, symbols } | undefined {
+function getPair( pair ) {
 
     const pairUpperCase = pair.toUpperCase();
     const is_validate_exp_reg = /^[a-zA-Z]+$/.test(pairUpperCase);
@@ -93,7 +98,7 @@ export function getPair( pair: string ): { base, symbols } | undefined {
 
 }
 
-export function calculateRateWithFee(currency: any): ResponseCurrencyModel {
+function calculateRateWithFee(currency) {
 
     const rate_with_fee = Number(currency.rates[currency.symbols] + ((Number(currency.fee) / 100) * currency.rates[currency.symbols] ) );
     const fee_amount = Number(currency.amount * rate_with_fee);
@@ -104,4 +109,12 @@ export function calculateRateWithFee(currency: any): ResponseCurrencyModel {
         fee_amount
     }
 
+}
+
+module.exports = {
+    CurrencyApiRestAccess,
+    CurrencyDBAccess,
+    getPair,
+    calculateRateWithFee,
+    RateFeeDBAccess
 }
