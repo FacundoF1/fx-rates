@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const host = "localhost";
 const server = Hapi.server({
-    port: 8080,
+    port: process.env.PORT || 8080,
     host: host,
     routes: {
         cors: {
