@@ -18,16 +18,7 @@ _Para su instalación es necesario descargar el repo y seguir los pasos_
 
 ```
 0: npm i
-1: npm run build
-2: npm run start
-```
-
-## Ejecutando las pruebas ⚙️
-
-_Para ejecutar las pruebas automatizadas por el sistema, debe correr el proyecto_
-
-```
-npm run test
+2: npm start
 ```
 
 ## Construido con 🛠️
